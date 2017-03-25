@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fullpage</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #wrap {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    #main {
+        top: 0;
+        position: relative;
+        /*transition: all 0.5s;*/
+        /*-webkit-transition: all 0.5s; !* Safari *!*/
+    }
+
+    .content {
+        width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+
+    .num1 {
+        background: #e8e8e8;
+    }
+
+    .num2 {
+        background: pink;
+    }
+
+    .num3 {
+        background: yellow;
+    }
+
+    .num4 {
+        background: orange;
+    }
+</style>
+<body>
+<div id="wrap">
+    <div id="main" style="top: 0;">
+        <div class="content num1">
+
+        </div>
+        <div class="content num2">
+            <button type="button" id="btn">跳转</button>
+        </div>
+        <div class="content num3">
+
+        </div>
+        <div class="content num4">
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script type="text/javascript">
+    fullpage.initialize("wrap", "main", "content");
+    var btn = document.getElementById("btn");
+    btn.onclick = function () {
+        fullpage.moveTo(1);
+    }
+</script>
+</body>
+</html>
